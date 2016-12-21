@@ -64,7 +64,7 @@ public class ImagePickActivity extends Activity {
     public void onClick(View View) {
         file = SDCardUtils.getPrivateFile(getBaseContext(), "foto.jpg", Environment.DIRECTORY_PICTURES);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+ //       intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
         startActivityForResult(intent, 0);
     }
 
@@ -82,11 +82,11 @@ public class ImagePickActivity extends Activity {
 
             Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
 
-            Uri selectedImage = data.getData();
+         //   Uri selectedImage = data.getData();
 
-            int orientation = getOrientation(getBaseContext(), selectedImage);
+         //   int orientation = getOrientation(getBaseContext(), selectedImage);
 
-            thumbnail = HandleBitmapPhoto(300, 300, thumbnail, orientation);
+            thumbnail = HandleBitmapPhoto(300, 300, thumbnail, 0); //orientation
             thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
             Globals.getInstance().selectedPhoto = bytes.toByteArray();
 

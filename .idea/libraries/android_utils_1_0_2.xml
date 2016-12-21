@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-utils-1.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.com.livroandroid/android-utils/1.0.2/7ec5b394a1411d624cfe51404f0272efaeaaf209/android-utils-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
