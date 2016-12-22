@@ -16,7 +16,10 @@ import android.view.View;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -28,6 +31,18 @@ public class ImagePickActivity extends Activity {
 
     private File file;
     private ImageView imageView;
+    private TextView lblResult;
+
+    Handler handlerLogin = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 0)
+                Utils.Show("Erro na autenticação", true);
+            else {
+                Utils.Show("AUTENTICADO !", true);
+            }
+        }
+    };
 
     Handler handler = new Handler() {
         @Override
@@ -36,12 +51,13 @@ public class ImagePickActivity extends Activity {
                 Utils.Show("Erro ao enviar imagem", true);
             else {
                 Utils.Show("Deu certo", true);
-                Log.d("Retorno", Globals.getInstance().resp_displayname);
+                lblResult.setText(Globals.getInstance().resp_displayname);
+               /* Log.d("Retorno", Globals.getInstance().resp_displayname);
                 Log.d("Retorno", Globals.getInstance().resp_matchtypes);
                 Log.d("Retorno", Globals.getInstance().resp_name);
                 Log.d("Retorno", Globals.getInstance().resp_passparams);
                 Log.d("Retorno", Globals.getInstance().resp_score);
-                Log.d("Retorno", Globals.getInstance().resp_thumbnailurl);
+                Log.d("Retorno", Globals.getInstance().resp_thumbnailurl);*/
             }
         }
     };
@@ -54,6 +70,9 @@ public class ImagePickActivity extends Activity {
         Globals.getInstance().applicationContext = getApplicationContext();
 
         imageView = (ImageView) findViewById(R.id.result);
+        lblResult = (TextView) findViewById(R.id.lblResult);
+
+        Api.getInstance().Login(handlerLogin);
 
         if (savedInstanceState != null) {
             file = (File) savedInstanceState.getSerializable("file");
@@ -86,8 +105,8 @@ public class ImagePickActivity extends Activity {
 
          //   int orientation = getOrientation(getBaseContext(), selectedImage);
 
-            thumbnail = HandleBitmapPhoto(300, 300, thumbnail, 0); //orientation
-            thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            thumbnail = HandleBitmapPhoto(200, 200, thumbnail, 0); //orientation
+            thumbnail.compress(Bitmap.CompressFormat.JPEG, 50, bytes);
             Globals.getInstance().selectedPhoto = bytes.toByteArray();
 
             Api.getInstance().SendImage(handler);

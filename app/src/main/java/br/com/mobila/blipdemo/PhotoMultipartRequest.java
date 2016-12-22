@@ -28,7 +28,7 @@ import com.android.volley.toolbox.HttpHeaderParser;
 
 public class PhotoMultipartRequest<T> extends Request<T> {
 
-    private static final String FILE_PART_NAME = "file";
+    private static final String FILE_PART_NAME = "input_image";
 
     private MultipartEntityBuilder mBuilder = MultipartEntityBuilder.create();
     private final Listener<T> mListener;
@@ -57,17 +57,8 @@ public class PhotoMultipartRequest<T> extends Request<T> {
             headers = new HashMap<String, String>();
         }
 
-        headers.put("Authorization", "Token(" + Globals.getInstance().tokenType + " " + Globals.getInstance().accessToken + ")");
-        headers.put("LatLong", "");
-        headers.put("LatLongAccuracy", "");
-        headers.put("Language", "pt-BR");
-        headers.put("DeviceOS", "");
-        headers.put("DeviceType", "");
-        headers.put("DeviceVersion", "");
-        headers.put("UniqueID", "");
-        headers.put("Accelerometer", "");
-        headers.put("DeviceOrientation", "0");
-        headers.put("Gyro", "");
+        headers.put("Authorization", Globals.getInstance().tokenType + " " + Globals.getInstance().accessToken);
+
 
 //        headers.put("Accept", "application/json");
 

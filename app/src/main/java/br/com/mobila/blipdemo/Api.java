@@ -80,7 +80,7 @@ public class Api implements Response.ErrorListener {
 
     }
 
-    public void Login(Handler h, final String username, final String password) {
+    public void Login(Handler h) {
         try {
             handler = h;
 
@@ -129,13 +129,25 @@ public class Api implements Response.ErrorListener {
 
                 int verb = Request.Method.POST;
 
+                final Gson gson = new Gson();
+
                 PhotoMultipartRequest req = new PhotoMultipartRequest(path, this,
-                        new Response.Listener<JSONObject>()
+                        new Response.Listener<String>()
                         {
                             @Override
-                            public void onResponse(JSONObject response) {
+                            public void onResponse(String response) {
                                 try {
-                                    if (response.has("id"))
+                                    BlipData[] d = gson.fromJson(response, BlipData[].class);
+
+                                    Globals.getInstance().resp_displayname = "";
+
+                                    if (d != null) {
+                                        for (BlipData b : d) {
+                                            Globals.getInstance().resp_displayname += b.getDisplayName() + "\n";
+                                        }
+                                    }
+
+  /*                                  if (response.has("id"))
                                         Globals.getInstance().resp_ID = response.get("id").toString();
 
                                     if (response.has("name"))
@@ -155,35 +167,25 @@ public class Api implements Response.ErrorListener {
 
                                     if (response.has("passparams"))
                                         Globals.getInstance().resp_passparams = response.get("passparams").toString();
-
+*/
 
                                     handler.sendEmptyMessage(1);
 
-                                } catch (JSONException e) {
+                                } catch (Exception e) {
                                     handler.sendEmptyMessage(0);
                                     Utils.Show("API Error (JSon) Login : " + e.getMessage(), true);
                                 }
                             }
                         }, (byte[]) Globals.getInstance().selectedPhoto){
 
-                    @Override
+                  /*  @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         HashMap<String, String> headers = new HashMap<String, String>();
 
-                        headers.put("Authorization", "Token(" + Globals.getInstance().tokenType + " " + Globals.getInstance().accessToken + ")");
-                        headers.put("LatLong", "");
-                        headers.put("LatLongAccuracy", "");
-                        headers.put("Language", "pt-BR");
-                        headers.put("DeviceOS", "");
-                        headers.put("DeviceType", "");
-                        headers.put("DeviceVersion", "");
-                        headers.put("UniqueID", "");
-                        headers.put("Accelerometer", "");
-                        headers.put("DeviceOrientation", "0");
-                        headers.put("Gyro", "");
+                        headers.put("Authorization", Globals.getInstance().tokenType + " " + Globals.getInstance().accessToken);
 
                         return headers;
-                    }
+                    }*/
                 };
 
                 // Adding request to request queue
