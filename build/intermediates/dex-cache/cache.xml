@@ -2,130 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="false"
         revision="24.0.1"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-b86b536cf18e247450081399b3c743e96aac5b21.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-20ae9f0f56988778fefcbfd00bc6b6e357629c3f.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-b493162ead9b96b7b856f7c7819aeb665e7882b1.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1-b089701e9c5c3cf0d786ff5581e7f79b6b25f230.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-da528522087ea16636f5000dcce033b199ad19e8.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-7adb381275fecf8f9f7550cb028afabede67af94.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-fa2dc812b5463cf2e9fb0baf64da113800d3c049.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-32e97915e0cb696784a24abd313c563ed106451b.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-109385d435ca084dcceb18f80eb4a0ff6a250b10.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-4b96c94eb8c5598c2ff13dc3e4f514de23f0e45a.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-1e792cbe176e37b251f31b46776acc3e88da4efc.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-1235ea60df47a7877e2e543fcdda52a650f6477e.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-95a75e70e82124d1ad32e8aed4360adda20c3756.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-9a38feb7e27905e99b52fcd95fe76724242b12cc.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-android/4.3.5/82edcaec6c7b4599eaeaaf11167ceea41db42f33/httpclient-android-4.3.5.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="82edcaec6c7b4599eaeaaf11167ceea41db42f33">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/httpclient-android-4.3.5-30bc97cf3bb2fd73eab2202aa082b8fe8715a33e.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-fca2e6555d17c8fc71e48dbc2cb3b1e848638eb4.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.5/1dd0d38df9c6d21e893f2e52403f1cd99e91cd81/httpmime-4.3.5.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="1dd0d38df9c6d21e893f2e52403f1cd99e91cd81">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/httpmime-4.3.5-e3a6d99c033f4d142ec4a8bf4669f1d3dea5e664.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="19d7678a8df17881d086f30ddda273d649c5ce0c">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-7ee761422c1a40fdba35fd1d8c3614f23e6a51c6.jar" />
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-46c1107b2604ecb3844352fef90bd94cce2236cf.jar" />
     </item>
     <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
@@ -135,11 +16,123 @@
         <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-a5fca47f311cc579cfc80fd366fbf93f65c3248c.jar" />
     </item>
     <item
+        jar="/Users/leonardo.saganski/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-android/4.3.5/82edcaec6c7b4599eaeaaf11167ceea41db42f33/httpclient-android-4.3.5.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="82edcaec6c7b4599eaeaaf11167ceea41db42f33">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/httpclient-android-4.3.5-30bc97cf3bb2fd73eab2202aa082b8fe8715a33e.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-fa2dc812b5463cf2e9fb0baf64da113800d3c049.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-fca2e6555d17c8fc71e48dbc2cb3b1e848638eb4.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-b493162ead9b96b7b856f7c7819aeb665e7882b1.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.5/1dd0d38df9c6d21e893f2e52403f1cd99e91cd81/httpmime-4.3.5.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="1dd0d38df9c6d21e893f2e52403f1cd99e91cd81">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/httpmime-4.3.5-e3a6d99c033f4d142ec4a8bf4669f1d3dea5e664.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-20ae9f0f56988778fefcbfd00bc6b6e357629c3f.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-9a38feb7e27905e99b52fcd95fe76724242b12cc.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1-b089701e9c5c3cf0d786ff5581e7f79b6b25f230.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-1e792cbe176e37b251f31b46776acc3e88da4efc.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-95a75e70e82124d1ad32e8aed4360adda20c3756.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-1235ea60df47a7877e2e543fcdda52a650f6477e.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-4b96c94eb8c5598c2ff13dc3e4f514de23f0e45a.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-109385d435ca084dcceb18f80eb4a0ff6a250b10.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-32e97915e0cb696784a24abd313c563ed106451b.jar" />
+    </item>
+    <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="24.0.1"
         sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
         <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-fcb2c488a6779af55d1ac0d615058c268ff75a20.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-b86b536cf18e247450081399b3c743e96aac5b21.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-7adb381275fecf8f9f7550cb028afabede67af94.jar" />
     </item>
     <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
@@ -149,25 +142,11 @@
         <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-d7b67e50e9ac21d6713a8e0608fc27c6d5cad005.jar" />
     </item>
     <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1-46c1107b2604ecb3844352fef90bd94cce2236cf.jar" />
-    </item>
-    <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
         jumboMode="false"
         revision="24.0.1"
         sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
         <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-1b4656467725dd05553f32282a0710072e89c002.jar" />
-    </item>
-    <item
-        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="24.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-844b8ddf39e3ecadf6fb6aeadf946b0c5430936a.jar" />
     </item>
     <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
@@ -182,6 +161,27 @@
         revision="24.0.1"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
         <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/gson-2.3.1-d5f5cbdcb4bcd1b9bbb28bbc72fcc3c7b9a54811.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-da528522087ea16636f5000dcce033b199ad19e8.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="19d7678a8df17881d086f30ddda273d649c5ce0c">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-7ee761422c1a40fdba35fd1d8c3614f23e6a51c6.jar" />
+    </item>
+    <item
+        jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/pre-dexed/debug/classes-844b8ddf39e3ecadf6fb6aeadf946b0c5430936a.jar" />
     </item>
     <item
         jar="/Users/leonardo.saganski/Documents/Projects/Android/BlipDemo/app/build/intermediates/exploded-aar/com.google.android.support/wearable/1.1.0/jars/classes.jar"

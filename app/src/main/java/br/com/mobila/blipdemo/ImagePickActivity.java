@@ -1,21 +1,30 @@
 package br.com.mobila.blipdemo;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Matrix;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,10 +39,14 @@ import livroandroid.lib.utils.SDCardUtils;
 
 public class ImagePickActivity extends Activity {
 
+    private static final String TAG = "MainActivity";
+
     private File file;
     private ImageView imgResult;
     private br.com.mobila.blipdemo.TagCloudView lblResult;
     private ProgressBar prbProgress;
+    private Button btnOk;
+    private LinearLayout layMaster;
 
     Handler handlerLogin = new Handler() {
         @Override
@@ -68,9 +81,29 @@ public class ImagePickActivity extends Activity {
 
         Globals.getInstance().applicationContext = getApplicationContext();
 
+        layMaster = (LinearLayout) findViewById(R.id.layMaster);
         imgResult = (ImageView) findViewById(R.id.imgResult);
         lblResult = (TagCloudView) findViewById(R.id.lblResult);
         prbProgress = (ProgressBar) findViewById(R.id.prbProgress);
+        btnOk = (Button) findViewById(R.id.btnOk);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            checkForPermission();
+
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ContextCompat.checkSelfPermission(getBaseContext(), Manifest.permission.CAMERA)
+                        == PackageManager.PERMISSION_GRANTED) {
+                    file = SDCardUtils.getPrivateFile(getBaseContext(), "foto.jpg", Environment.DIRECTORY_PICTURES);
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    //       intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+                    startActivityForResult(intent, 0);
+                } else {
+                    checkForPermission();
+                }
+            }
+        });
 
         Api.getInstance().Login(handlerLogin);
 
@@ -102,11 +135,34 @@ public class ImagePickActivity extends Activity {
 
     }
 
-    public void onClick(View View) {
-        file = SDCardUtils.getPrivateFile(getBaseContext(), "foto.jpg", Environment.DIRECTORY_PICTURES);
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
- //       intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
-        startActivityForResult(intent, 0);
+    @TargetApi(Build.VERSION_CODES.M)
+    private void checkForPermission() {
+        int permissionCheck = checkSelfPermission(Manifest.permission.CAMERA);
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "Granted");
+        } else {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(ImagePickActivity.this, Manifest.permission.CAMERA)) {
+                Log.d(TAG, "Contacts Permission Required!!");
+                createSnackbar("Contacts Permission Required!!", "Try Again");
+            }
+            ActivityCompat.
+                    requestPermissions(ImagePickActivity.this, new String[]{Manifest.permission.CAMERA}, 1);
+
+        }
+    }
+
+    private void createSnackbar(String message, String action) {
+        Snackbar
+                .make(layMaster, message, Snackbar.LENGTH_INDEFINITE)
+                .setAction(action, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ActivityCompat.
+                                requestPermissions(ImagePickActivity.this,
+                                        new String[]{Manifest.permission.CAMERA}, 1);
+                    }
+                })
+                .show();
     }
 
     @Override
@@ -127,9 +183,10 @@ public class ImagePickActivity extends Activity {
 
          //   int orientation = getOrientation(getBaseContext(), selectedImage);
 
-            thumbnail = HandleBitmapPhoto(200, 200, thumbnail, 0); //orientation
-            thumbnail.compress(Bitmap.CompressFormat.JPEG, 50, bytes);
-            Globals.getInstance().selectedPhoto = bytes.toByteArray();
+            thumbnail = HandleBitmapPhoto(300, 300, thumbnail, 0); //orientation
+            thumbnail.compress(Bitmap.CompressFormat.JPEG, 80, bytes);
+            byte[] bb = bytes.toByteArray();
+            Globals.getInstance().selectedPhoto = bb;
 
             imgResult.setImageBitmap(thumbnail);
 
