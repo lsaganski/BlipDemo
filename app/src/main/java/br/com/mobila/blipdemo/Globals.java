@@ -6,6 +6,8 @@ import android.os.Handler;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+
 /**
  * Created by Leonardo Saganski on 27/11/16.
  */
@@ -27,6 +29,7 @@ public class Globals {
     public String resp_matchtypes;
     public String resp_score;
     public String resp_passparams;
+    public ArrayList<String> tags;
 
     public byte[] selectedPhoto;
 
@@ -42,6 +45,6 @@ public class Globals {
     }
 
     public Globals() {
-
+        tags = new ArrayList<>();
     }
 }

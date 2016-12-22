@@ -35,12 +35,13 @@ public class Api implements Response.ErrorListener {
     int what;
     Gson gson;
     Handler handler;
+    String caller;
 
     boolean ins;
 
     String apiPath = "http://www.mobila.kinghost.net/aidavecapi/api/";
 
-
+    int tries = 0;
 
     private static Api instance;
 
@@ -54,7 +55,11 @@ public class Api implements Response.ErrorListener {
     @Override
     public void onErrorResponse(VolleyError error) {
 
-        if (error != null) {
+        if (tries < 3 && caller == "SendImage")
+            SendImage(handler);
+        else if (tries < 3 && caller == "Login")
+            Login(handler);
+        else if (error != null) {
             if (error instanceof TimeoutError || error instanceof NoConnectionError) {
                 Utils.Show("Timeout Error: " + error.getMessage(), true);
             } else if (error instanceof AuthFailureError) {
@@ -83,6 +88,9 @@ public class Api implements Response.ErrorListener {
     public void Login(Handler h) {
         try {
             handler = h;
+            caller = "Login";
+
+            tries ++;
 
             if (!Utils.verificaConexao()) {
                 Utils.Show("Sem conexão.", true);
@@ -121,6 +129,9 @@ public class Api implements Response.ErrorListener {
     public void SendImage(Handler h) {
         try {
             handler = h;
+            caller = "SendImage";
+
+            tries ++;
 
             if (!Utils.verificaConexao()) {
                 Utils.Show("Sem conexão.", true);
@@ -142,8 +153,10 @@ public class Api implements Response.ErrorListener {
                                     Globals.getInstance().resp_displayname = "";
 
                                     if (d != null) {
+                                        Globals.getInstance().tags.clear();
+
                                         for (BlipData b : d) {
-                                            Globals.getInstance().resp_displayname += b.getDisplayName() + "\n";
+                                            Globals.getInstance().tags.add(b.getDisplayName());
                                         }
                                     }
 

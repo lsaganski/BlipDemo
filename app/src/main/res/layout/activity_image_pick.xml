@@ -5,17 +5,41 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:onClick="onClick"
+        android:text="CAPTURAR IMAGEM"
+        android:background="#0099BB"
+        android:textColor="#FFFFFF"
         />
-    <TextView
-        android:id="@+id/lblResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <ImageView
-        android:id="@+id/result"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/imgResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            />
+        <ProgressBar
+            android:id="@+id/prbProgress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:indeterminate="true"
+            android:visibility="gone"
+            />
+        <br.com.mobila.blipdemo.TagCloudView
+            android:id="@+id/lblResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
 </LinearLayout>

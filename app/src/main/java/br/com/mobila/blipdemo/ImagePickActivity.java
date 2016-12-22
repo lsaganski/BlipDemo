@@ -16,6 +16,7 @@ import android.view.View;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +31,9 @@ import livroandroid.lib.utils.SDCardUtils;
 public class ImagePickActivity extends Activity {
 
     private File file;
-    private ImageView imageView;
-    private TextView lblResult;
+    private ImageView imgResult;
+    private br.com.mobila.blipdemo.TagCloudView lblResult;
+    private ProgressBar prbProgress;
 
     Handler handlerLogin = new Handler() {
         @Override
@@ -47,17 +49,14 @@ public class ImagePickActivity extends Activity {
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            if (msg.what == 0)
+            if (msg.what == 0) {
                 Utils.Show("Erro ao enviar imagem", true);
-            else {
+                prbProgress.setVisibility(View.GONE);
+                lblResult.setVisibility(View.GONE);
+            } else {
                 Utils.Show("Deu certo", true);
-                lblResult.setText(Globals.getInstance().resp_displayname);
-               /* Log.d("Retorno", Globals.getInstance().resp_displayname);
-                Log.d("Retorno", Globals.getInstance().resp_matchtypes);
-                Log.d("Retorno", Globals.getInstance().resp_name);
-                Log.d("Retorno", Globals.getInstance().resp_passparams);
-                Log.d("Retorno", Globals.getInstance().resp_score);
-                Log.d("Retorno", Globals.getInstance().resp_thumbnailurl);*/
+                lblResult.setVisibility(View.VISIBLE);
+                prbProgress.setVisibility(View.GONE);
             }
         }
     };
@@ -69,8 +68,9 @@ public class ImagePickActivity extends Activity {
 
         Globals.getInstance().applicationContext = getApplicationContext();
 
-        imageView = (ImageView) findViewById(R.id.result);
-        lblResult = (TextView) findViewById(R.id.lblResult);
+        imgResult = (ImageView) findViewById(R.id.imgResult);
+        lblResult = (TagCloudView) findViewById(R.id.lblResult);
+        prbProgress = (ProgressBar) findViewById(R.id.prbProgress);
 
         Api.getInstance().Login(handlerLogin);
 
@@ -78,6 +78,28 @@ public class ImagePickActivity extends Activity {
             file = (File) savedInstanceState.getSerializable("file");
             showImage(file);
         }
+
+        Thread thread = new Thread() {
+            public void run() {
+                while (true) {
+                    try {
+                        if (Globals.getInstance().tags.size() > 0) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    lblResult.scroll -= 100;
+                                    lblResult.invalidate();
+                                }
+                            });
+                        }
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                    }
+                }
+            }
+        };
+        thread.start();
+
     }
 
     public void onClick(View View) {
@@ -108,6 +130,11 @@ public class ImagePickActivity extends Activity {
             thumbnail = HandleBitmapPhoto(200, 200, thumbnail, 0); //orientation
             thumbnail.compress(Bitmap.CompressFormat.JPEG, 50, bytes);
             Globals.getInstance().selectedPhoto = bytes.toByteArray();
+
+            imgResult.setImageBitmap(thumbnail);
+
+            lblResult.setVisibility(View.GONE);
+            prbProgress.setVisibility(View.VISIBLE);
 
             Api.getInstance().SendImage(handler);
         }
@@ -172,12 +199,12 @@ public class ImagePickActivity extends Activity {
         if (file != null && file.exists()) {
             Log.d("foto", file.getAbsolutePath());
 
-            int w = imageView.getWidth();
-            int h = imageView.getHeight();
+            int w = imgResult.getWidth();
+            int h = imgResult.getHeight();
 
             Bitmap bitmap = ImageResizeUtils.getResizedImage(Uri.fromFile(file), w, h, false);
-            Toast.makeText(this, "w/h:" + imageView.getWidth() + "/" + imageView.getHeight() + " > " + "w/h" + bitmap.getWidth() + "/" + bitmap.getHeight(), Toast.LENGTH_SHORT).show();;
-            imageView.setImageBitmap(bitmap);
+            Toast.makeText(this, "w/h:" + imgResult.getWidth() + "/" + imgResult.getHeight() + " > " + "w/h" + bitmap.getWidth() + "/" + bitmap.getHeight(), Toast.LENGTH_SHORT).show();;
+            imgResult.setImageBitmap(bitmap);
         }
     }
 }
